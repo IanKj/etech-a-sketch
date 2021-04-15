@@ -1,0 +1,14 @@
+
+.container {
+    display:grid;
+    width: 600px;
+    height: 600px;
+     border-bottom: 1px solid black; 
+    border-left: 1px solid black;  
+}
+
+.container div{
+     border-right: 1px solid black; 
+    border-top: 1px solid black;  
+}
+
