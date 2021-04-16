@@ -13,7 +13,21 @@
     <div class="container">
 
     </div>
+    <label for="newGridForm">Change Grid Size</label>
+    <form id='newGridForm'>
+        <label for="number">Width</label>
+        <input type="number" id="width">
+        <label for="number">Height</label>
+        <input type="number" id="height">
+        <input id="submitBtn" type="button" value="Create New Grid">
+        <input type="radio" checked id="fancy-colors" name="color"
+            value="Fancy Colors">
+        <label for="fancy-colors">Fancy Colors</label><br>
+        <input type="radio" id="black-color" name="color" value="black">
+        <label for="black">Black</label>
+    </form>
     <button id='reset'>Reset</button>
+
 
     <script src="app.js"></script>
 </body>
