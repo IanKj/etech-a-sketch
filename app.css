@@ -7,6 +7,9 @@ body {
 
 #gridHeader {
     grid-area: header;
+    background-color: #a5a58d;
+    padding: 5px;
+    border-radius: 10px;
 }
 
 form input {
@@ -20,45 +23,55 @@ form input {
     grid-area: height;
 }
 
-#fancy-container {
-grid-area: fancy-colors;
-}
-
-#select-container {
-grid-area: select-color;
+#color-container {
+    grid-area: color-container;
+    align-self: start;
+    background-color: #a5a58d;
+    padding: 5px;
+    border-radius: 10px;
 }
 
 .container button {
-grid-area: reset;
+    justify-self: center;
+    align-self: center;
+    grid-area: reset;
+    height: 30px
 }
 
 .container {
-    width: 600px;
+    width: 800px;
     display:grid;
     justify-items: center;
-    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 5px;
     grid-template-areas:
-        "header header"
-        "form form"
-        "fancy-colors reset"
-        "select-color reset";
+        " header header header header ."
+        " form form form form color-container"
+        "main main main main .";
 }
 
 form {
     display: grid;
+    row-gap: 5px;
     grid-area: form;
-    grid-template-columns: 1fr 1fr;
+    background-color: #a5a58d;
+    padding: 5px;
+    border-radius: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
-        "width height"
-        "submit submit";
+        "width height reset"
+        "submit submit reset";
 }
 
 h1 {
     margin-bottom: 0;
+    margin-top: 10px;
 }
 
 .gridContainer {
     background-color: #b7b7a4;
+    grid-area: main;
     display:grid;
     width: 601px;
     height: 600px;
@@ -68,10 +81,10 @@ h1 {
     border-left: 1px solid black;   */
 }
 
-/* .gridContainer div{
-    border-right: 1px solid black; 
-    border-top: 1px solid black;   
-} */
+.gridContainer div{
+    /* border-right: 1px solid black; 
+    border-top: 1px solid black;    */
+}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

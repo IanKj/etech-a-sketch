@@ -10,33 +10,37 @@
 </head>
 
 <body>
-    <h1>ETCH-A-SKETCH</h1>
+
     <div class="container">
-        <label id="gridHeader" for="newGridForm">Change Grid Size</label>
+        <h1 id="gridHeader">ETCH-A-SKETCH</h1>
         <form action="#" id='newGridForm' return false>
             <div id="gridWidth">
-                <label for="number">Width</label>
+                <label for="number">Height</label>
                 <input type="number" required id="width" min="1" max="100">
             </div>
             <div id="gridHeight">
-                <label for="number">Height</label>
+                <label for="number">Width</label>
                 <input type="number" required id="height" min="1" max="100">
             </div>
             <input id="submitBtn" type="submit" value="Create New Grid">
+            <button id='reset' type="button">Reset</button>
         </form>
-        <div id="fancy-container">
-            <input type="radio" checked id="fancy-colors" name="color"
-                value="Fancy Colors">
-            <label for="fancy-colors">Random Colors</label>
+        <div id="color-container">
+            <div id="fancy-container">
+                <input type="radio" checked id="fancy-colors" name="color"
+                    value="Fancy Colors">
+                <label for="fancy-colors">Random Colors</label>
+            </div>
+            <div id="select-container">
+                <input type="radio" id="select-color" name="color">
+                <select name="color-options" id="color-options">
+                </select>
+            </div>
         </div>
-        <div id="select-container">
-            <input type="radio" id="select-color" name="color">
-            <select name="color-options" id="color-options">
-            </select>
-        </div>
-        <button id='reset'>Reset</button>
+
+        <div class="gridContainer"></div>
     </div>
-    <div class="gridContainer"></div>
+
 
 
 
