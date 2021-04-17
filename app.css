@@ -1,24 +1,80 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #6b705c;
+}
+
+#gridHeader {
+    grid-area: header;
+}
+
+form input {
+    grid-area: submit;
+}
+#gridWidth {
+    grid-area: width;
+}
+
+#gridHeight {
+    grid-area: height;
+}
+
+#fancy-container {
+grid-area: fancy-colors;
+}
+
+#select-container {
+grid-area: select-color;
+}
+
+.container button {
+grid-area: reset;
+}
 
 .container {
-    display:grid;
     width: 600px;
-    height: 600px;
-     border-bottom: 1px solid black; 
-    border-left: 1px solid black;  
+    display:grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "header header"
+        "form form"
+        "fancy-colors reset"
+        "select-color reset";
 }
 
-.container div{
-     border-right: 1px solid black; 
-    border-top: 1px solid black;  
+form {
+    display: grid;
+    grid-area: form;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "width height"
+        "submit submit";
 }
+
+h1 {
+    margin-bottom: 0;
+}
+
+.gridContainer {
+    background-color: #b7b7a4;
+    display:grid;
+    width: 601px;
+    height: 600px;
+    border: 5px solid #a5a58d;
+    border-radius: 5px;
+    /* border-bottom: 1px solid black; 
+    border-left: 1px solid black;   */
+}
+
+/* .gridContainer div{
+    border-right: 1px solid black; 
+    border-top: 1px solid black;   
+} */
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
-
-.below100 {
-    color: red;
-
 }
